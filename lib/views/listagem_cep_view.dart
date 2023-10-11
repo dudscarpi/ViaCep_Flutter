@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:app_api_via_cep/models/listagem_enderecos.dart';
 import 'package:app_api_via_cep/repository/back4app_repository.dart';
 import 'package:app_api_via_cep/views/criacao_cep_view.dart';
@@ -5,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class ListagemCepView extends StatefulWidget {
+  // ignore: use_key_in_widget_constructors
   const ListagemCepView({Key? key});
 
   @override
@@ -38,14 +41,6 @@ class _ListCepViewState extends State<ListagemCepView> {
     return ceps;
   }
 
-  void showSnackBar(String message) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(message),
-      ),
-    );
-  }
-
   Future<void> deleteEndereco(String objectId) async {
     try {
       await back4AppRepository.deleteEndereco(objectId);
@@ -53,9 +48,19 @@ class _ListCepViewState extends State<ListagemCepView> {
       setState(() {
         _enderecosBack4AppModel = Future.value(updatedCeps);
       });
-      showSnackBar("Endereço Excluído com sucesso!");
+      // ignore: use_build_context_synchronously
+      var showSnackBar2 = ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text("Endereço Excluído com sucesso!"),
+        ),
+      );
     } catch (e) {
-      showSnackBar("Erro ao excluir o endereço: $e");
+      // ignore: use_build_context_synchronously
+      var showSnackBar2 = ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text("Erro ao excluir o endereço: $e"),
+        ),
+      );
     }
   }
 

@@ -88,7 +88,7 @@ class _BuscaCepState extends State<BuscaCep> {
                                 Text(
                                   "${viaCepModel.cep} - ${viaCepModel.logradouro ?? ""}",
                                   style: const TextStyle(
-                                    fontSize: 20,
+                                    fontSize: 10,
                                     fontWeight: FontWeight.w600,
                                   ),
                                 ),
@@ -98,11 +98,12 @@ class _BuscaCepState extends State<BuscaCep> {
                                   viaCepModel.localidade != "" &&
                                   viaCepModel.uf != null &&
                                   viaCepModel.uf != "")
-                                Text(
-                                  "${viaCepModel.logradouro} - ${viaCepModel.bairro} - ${viaCepModel.localidade} - ${viaCepModel.uf}",
-                                  style: const TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w600,
+                                Center(
+                                  child: Text(
+                                    "${viaCepModel.logradouro} - ${viaCepModel.bairro} - ${viaCepModel.localidade} - ${viaCepModel.uf}",
+                                    style: const TextStyle(
+                                      fontSize: 15,
+                                    ),
                                   ),
                                 ),
                             ],
@@ -115,7 +116,7 @@ class _BuscaCepState extends State<BuscaCep> {
                 onPressed: () {
                   enviarEndereco(context);
                 },
-                child: const Text('Cadastrar CEP'),
+                child: const Text('Cadastrar Novo CEP'),
               ),
           ],
         ),
