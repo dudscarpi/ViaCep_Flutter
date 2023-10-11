@@ -1,16 +1,8 @@
-# app_api_via_cep
+Projeto Flutter - Busca de Cep Utilizando a API Via Cep
 
-A new Flutter project.
+Bootcamp Dio Santander Flutter
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+https://github.com/dudscarpi/ViaCep_Flutter/assets/71911651/fa5c54e5-ac87-42e1-a7e1-73b06136b4d9
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
